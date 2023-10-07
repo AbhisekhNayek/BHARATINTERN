@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PROJECT MANAGEMENT TOOL</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="task-management">
+        <div class="left-section">
+            <h1>PROJECT MANAGEMENT TOOL</h1>
+        <div class="task-list">
+            <ul id="myTasksList">
+                <!-- No initial tasks here -->
+            </ul>
+        </div>
+        <h2>TASK MANEGER</h2>
+        <div class="create-task">
+            <form id="createTaskForm" method="post">
+                <label for="taskName">TASK NAME:</label>
+                <input type="text" id="taskName" name="taskName">
+                <br>
+                <label for="assignedTo">ASSIGNED BY:</label>
+                <select id="assignedTo" name="assignedTo">
+                    <option value="Abhi">ABHISEKH</option>
+                    <option value="Biswa">BISWAJIT</option>
+                    <option value="Debu">DEBU</option>
+                    <option value="Sakil">SAKIL</option>
+                    <option value="Nitai">NITAI</option>
+                </select><br>
+                <label for="dueDate">DUE DATE:</label>
+                <input type="date" name="dueDate" id="dueDate"><br>
+                <label for="description">DESCRIPTION:</label><br>
+                <textarea name="description" id="description"></textarea><br>
+                <input type="submit" value="ADD TASK">
+            </form>
+        </div>
+        <div class="task-list">
+            <h3>ASSIGNED TASK:</h3>
+            <ul id="assignedTasksList">
+                <!-- No initial assigned tasks here -->
+            </ul>
+        </div>
+        <div class="completed-task-list">
+            <h3>COMPLETED TASK:</h3>
+            <ul id="completedTasksList">
+                <!-- No initial completed tasks here -->
+            </ul>
+        </div>
+        </div>
+            <div class="right-section">
+                <h2>CHAT HERE</h2>
+                <div class="chat-messages">
+                    <!-- Chat messages will be displayed here -->
+                </div>
+                <div class="chat-input">
+                    <select id="writerName">
+                        <option value="">YOUR NAME</option>
+                        <option value="Abhi">ABHISEKH</option>
+                        <option value="Biswa">BISWAJIT</option>
+                        <option value="Debu">DEBU</option>
+                        <option value="Sakil">SAKIL</option>
+                        <option value="Nitai">NITAI</option>
+                    </select>
+                    <input type="text" id="chatMessage" placeholder="Type your message...">
+                    <button id="sendButton">SEND</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

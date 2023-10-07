@@ -1,0 +1,507 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat", sans-serif;
+}
+
+.development-message {
+  display: none; /* Hide the message by default */
+}
+
+@media (max-width: 900px) {
+  .development-message {
+    display: block; /* Show the message for screens up to 767px width */
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+  }
+  .main_container,
+  .dashboard_container,
+  .logo_container,
+  .personal_code_container,
+  .personal_code_connecting_container,
+  .dashboard_blur,
+  .videos_container,
+  .messenger_container {
+    display: none;
+  }
+}
+
+
+.main_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
+}
+
+
+button {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:hover {
+  opacity: 0.5;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:active {
+  outline: none;
+  border: 2px solid black;
+}
+
+button:focus {
+  outline: 0;
+  border: 2px solid black;
+}
+
+
+.dashboard_container {
+  width: 100%;
+  height: 18%;
+  background: linear-gradient(168.68deg, #03b0e9 1.12%, #00f2ff 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 40px; /* Increase padding for more width */
+}
+@media (max-width: 900px) {
+  .main_container,
+  .dashboard_container,
+  .logo_container,
+  .personal_code_container,
+  .personal_code_connecting_container,
+  .dashboard_blur,
+  .videos_container,
+  .messenger_container {
+    display: none;
+  }
+}
+.logo_container {
+  margin-left: 20px;
+ 
+  width: 150px;
+  height: 80px;
+  overflow:hidden ; /* Trims the extra layers */
+   /* Adds rounded corners */
+}
+
+.logo_container img {
+  width: 65%;
+  height: 90%;
+   /* Maintains aspect ratio and covers the container */
+  border-radius: 10px; /* Inherits rounded corners from the container */
+}
+
+
+.personal_code_container {
+  width: 250px; /* Increase the width of the personal code container */
+  height: 40px;
+  margin-left: 20px;
+  background: rgba(196, 196, 196, 0.2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal_code_title_container {
+  display: flex;
+  align-items: left; /* Hide the title container */
+}
+
+.personal_code_title_paragraph {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.personal_code_value_container {
+  margin-right: 15px; /* Adjust margin for alignment */
+  flex-grow: 1; /* Allow the container to grow */
+  display: flex;
+  align-items: center;
+}
+
+
+.personal_code_value_paragraph {
+  font-size: 16px; /* Increase font size */
+  text-align: center; /* Center the text */
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevent line breaks */
+  text-overflow: ellipsis; /* Add ellipsis for truncated text */
+}
+
+.personal_code_copy_button {
+  width: 35px; /* Adjust button size */
+  height: 35px;
+}
+
+
+.personal_code_connecting_container {
+  display: flex;
+  align-items: center;
+}
+
+.personal_code_connecting_paragraph {
+  display:none;
+  
+}
+
+
+
+.personal_code_connecting_input_container {
+  width: 100%;
+  height: 40px;
+}
+
+.personal_code_input:focus {
+  outline: none;
+}
+
+.personal_code_input {
+  width: 229px; /* Adjust input size */
+  height: 40px;
+  background: rgba(196, 196, 196, 0.2);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0 15px; /* Adjust padding */
+  margin-right: 90px;
+  flex-grow: 1; /* Allow the input to grow */
+}
+
+.personal_code_input::placeholder {
+  position: absolute;
+  top: 10px;
+  left:2px;
+  font-size: 14px;
+  padding: 0px 5px;
+  color: #feffff;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+
+
+
+
+
+.personal_code_connecting_buttons_container {
+  display: flex;
+  align-items: center; /* Center the buttons vertically */
+  margin-left: 15px; /* Adjust margin to create space between input and buttons */
+}
+.connecting_button {
+  width: 40px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;  /* Add some spacing between buttons */
+}
+
+.connecting_buttons_image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/** above is the dashboard code **/
+
+.call_container {
+  width: 50%;
+  height: 300%;
+  margin-right: 53%;
+}
+
+.messenger_container {
+  position: relative;
+  bottom: 50%;
+  left: 35%;
+  width: 25%;
+  height: 250px;
+  background: #f4f9fd;
+  display: flex;
+  flex-direction: column;
+}
+
+.new_message_container {
+  position: relative;
+
+}
+.new_message_input {
+  margin: 0 40px;
+  margin-bottom: 30px;
+  width: calc(100% - 80px);
+  height: 60px;
+  color: #676f7a;
+  font-size: 16px;
+  font-weight: 400;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  box-shadow: 0px 2px 20px 5px rgba(10, 145, 219, 0.05);
+  padding: 0 60px 0 20px;
+  z-index: 2;
+}
+
+.new_message_input:focus {
+  outline: none;
+  color: #676f7a;
+}
+
+.messages_container {
+  flex-grow: 1;
+  margin: 40px 30px;
+  overflow-y: scroll;
+}
+
+.message_left_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.message_left_paragraph {
+  background: #ffffff;
+  border: 1px solid #d5deeb;
+  border-radius: 8px 8px 8px 0px;
+  padding: 20px 13px;
+  color: #545c68;
+  min-width: 60px;
+}
+
+.message_right_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.message_right_paragraph {
+  background: linear-gradient(168.68deg, #0052c9 1.12%, #0a91db 100%);
+  border: 1px solid #d5deeb;
+  border-radius: 8px 8px 8px 0px;
+  padding: 20px 13px;
+  color: #ffffff;
+  min-width: 60px;
+}
+
+.send_message_button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  box-shadow: 0px 2px 20px 5px rgba(10, 145, 219, 0.05);
+  background: linear-gradient(180deg, #029f58 0%, #01a720 100%);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.send_message_button_image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.videos_container {
+  
+  height: calc(100% - 70px);
+  margin: 30px 40px 40px 40px;
+  border-radius: 15px;
+  background: linear-gradient(168.68deg, #0052c9 1.12%, #0a91db 100%);
+  /* background-image: url('../utils/images/logo.png'); */
+}
+
+.videos_placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.local_video_container {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  background: rgba(196, 196, 196, 0.2);
+  top: 15px;
+  left: 15px;
+  margin-top: 100px;
+}
+
+.local_video {
+  width: 100%;
+  height: 100%;
+}
+
+.remote_video {
+  width: 100%;
+  height: 100%;
+}
+
+.call_buttons_container {
+  position: absolute;
+  width: 395px;
+  height: 75px;
+  bottom: 29%;
+  right: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.finish_chat_button_container {
+  position: absolute;
+  width: 395px;
+  height: 75px;
+  bottom: 40px;
+  left: calc(50% - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call_button_small {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.call_button_large {
+  width: 75px;
+  height: 75px;
+  border-radius: 75px;
+  background: #fc5d5b;
+  transition: 0.3s;
+}
+
+.dialog_wrapper {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+}
+
+.dialog_content {
+  width: 520px;
+  height: 530px;
+  background: white;
+  border: 1px solid #d5deeb;
+  box-shadow: 0px 2px 20px 5px rgba(10, 145, 219, 0.05);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.dialog_title {
+  font-weight: 600;
+  font-size: 22px;
+  color: black;
+}
+
+.dialog_image_container {
+  width: 275px;
+  height: 275px;
+  border-radius: 275px;
+  background: linear-gradient(168.68deg, #0052c9 1.12%, #0a91db 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog_description {
+  font-size: 20px;
+  color: black;
+  font-weight: 500;
+  padding: 0 40px;
+}
+
+.dialog_button_container {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dialog_accept_call_button {
+  width: 180px;
+  height: 55px;
+  background: linear-gradient(180deg, #00c920 0%, #2fe24b 100%);
+  box-shadow: 0px 2px 42px 10px rgba(47, 226, 75, 0.15);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.dialog_reject_call_button {
+  width: 180px;
+  height: 55px;
+  background: linear-gradient(180deg, #ff3b3b 0%, #ff6262 100%);
+  box-shadow: 0px 2px 42px 10px rgba(255, 59, 59, 0.15);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.dialog_button_image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.dashboard_blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(196, 196, 196, 0.2);
+}
+
+.video_recording_buttons_container {
+  position: absolute;
+  width: 180px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(60px);
+  right: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#stop_recording_button {
+  color: white;
+  height: 28px;
+}
+
+.display_none {
+  display: none;
+}

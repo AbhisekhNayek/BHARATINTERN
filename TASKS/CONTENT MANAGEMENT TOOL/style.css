@@ -1,0 +1,101 @@
+body {
+    background: url("https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg");
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.article-section {
+    background: url("https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg");
+    flex: 0 0 45%;
+    color: #fff;
+    padding: 2rem;
+    justify-content: center;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.856);
+    border-radius: 10px;
+}
+
+.action-section {
+    background: url("https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg");
+    flex: 0 0 45%; 
+    padding: 2rem;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.856);
+    border-radius: 10px;
+}
+
+.article-section div, .output-section div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+button {
+    padding: 6px 27px;
+    background-color: #000000;
+    border: 2px solid black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #100f0f;
+}
+
+.img{
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#addImageUrl,#addVideoUrl
+{
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    padding: 4px 1rem;
+}
+
+
+
+h2 {
+    border-bottom: 4px solid #00ff2f;
+    padding-bottom: 0.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.uploaded-content {
+    padding: 3px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uploaded-content video {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CONTENT MANAGEMENT TOOL</title>
+</head>
+
+<body>
+    <div class="head">
+        <h1>CONTENT MANAGEMENT TOOL</h1>
+    </div>
+
+    <div class="flex-container">
+        <section class="article-section">
+            <h2>ARTICLE</h2>
+            <div>
+                <label for="title">TITLE :</label>
+                <input type="text" id="title" placeholder="Enter The Title...">
+            </div>
+            <div>
+                <label for="content">CONTENT :</label>
+                <textarea id="content" placeholder="Add Your Content Here..."></textarea>
+            </div>
+            <div>
+                <label for="image">ADD IMAGE FILE :</label>
+                <input type="file" id="image" accept="image/*">
+            </div>
+            <div>
+                <label for="video">ADD VIDEO FILE :</label>
+                <input type="file" id="video" accept="video/*">
+            </div>
+            <div class="urls">
+                <div class= "img">
+                    <label for="addImageUrl">ADD IMAGE BY URL :</label>
+                    <button id="addImageUrl">ADD URL</button>
+                </div>
+                <div class="video">
+                    <label for="addVideoUrl">ADD VIDEO BY URL :</label>
+                    <button id="addVideoUrl">ADD URL</button>
+                </div>
+            </div>
+            <button onclick="submitForm()">ADD</button>
+        </section>
+        <section id="dataSection" class="action-section">
+            <h2>ACTIONS</h2>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
